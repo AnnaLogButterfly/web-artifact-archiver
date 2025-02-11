@@ -1,0 +1,15 @@
+{
+    "name": "web-archiver-action",
+    "version": "1.0.0",
+    "description": "GitHub Action to archive web artifacts",
+    "main": "main.js",
+    "scripts": {
+      "start": "node main.js"
+    },
+    "dependencies": {
+      "@actions/core": "^1.10.0"
+    },
+    "devDependencies": {
+    "@vercel/ncc": "^0.36.0"
+    }
+  }

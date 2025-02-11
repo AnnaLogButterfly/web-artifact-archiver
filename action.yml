@@ -1,0 +1,28 @@
+name: "Web Artifact Archiver"
+description: "Archives a single web artifact, preserving metadata and updating README and index."
+
+inputs:
+  url:
+    description: "The URL of the website or web artifact to archive."
+    required: true
+  archive_dir:
+    description: "The directory where the archive is stored. Defaults to 'archive'."
+    required: false
+    default: "archive"
+  limit_rate:
+    description: "Optional rate limit for wget (e.g., '100k')."
+    required: false
+  user_agent:
+    description: "User agent string to use for HTTP requests."
+    required: false
+    default: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+  contact_email:
+    description: "Optional contact email address for inclusion in the generated README."
+    required: false
+  schedule_description:
+    description: "Optional description (such as a cron schedule) to include in index.html."
+    required: false
+
+runs:
+  using: "node16"
+  main: "index.js"
